@@ -1,0 +1,54 @@
+Registro Único de Contribuyentes (RUC)
+Personas Naturales
+
+¿Qué es y para qué sirve?: Es un instrumento que tiene por función registrar e identificar a los contribuyentes con fines impositivos y proporcionar esta información a la Administración Tributaria. 
+Sirve para realizar alguna actividad económica de forma permanente u ocasional en el Ecuador. Corresponde al número de identificación asignado a todas aquellas personas naturales y/o sociedades, que sean titulares de bienes o derechos por los cuales deben pagar impuestos.
+
+Ciclo del contribuyente
+- Inscripción en el RUC
+- Emisión de comprobantes de venta (ver más)
+- Declaración de impuestos (ver más)
+- Pago de impuestos (ver más)
+- Exigir mis derechos (ver más)
+
+Base de datos del Registro Único de Contribuyentes
+Visualice este y otros catastros en el menú principal del portal web, sección Catastros.
+Clasificador Internacional Industrial Único
+Desde el lunes 29 de junio de 2015 el Clasificador Internacional Industrial Único (CIIU) se actualizó a la versión 4.0 séptimo nivel.
+
+¿Cómo se conforma?: Personas naturales ecuatorianos y extranjeros residentes:
+cedula de identidad: 1716537341
+RUC: 1716537341001
+
+Sociedades privadas y extranjeros no residentes (sin cédula de identidad):
+Dos primeros dígitos: código de la provincia donde se emite el número de RUC.
+Tercer dígito: siempre es 9.
+Del cuarto al décimo dígito: son números consecutivos.
+Los últimos tres dígitos serán 001.
+Ejemplo: 0296537341001
+
+Sociedades públicas:
+Dos primeros dígitos: código de la provincia donde se emite el número de RUC.
+Tercer dígito es 6 o 9.
+Del cuarto al décimo dígito: son números consecutivos.
+Los últimos tres dígitos serán 001.
+Ejemplo: 0266537341001
+
+* Tipos de contribuyentes
+
+Personas naturales: Son personas nacionales o extranjeras que realizan actividades económicas lícitas y pueden o no estar obligadas a llevar contabilidad. Personas naturales no obligadas a llevar contabilidad ¿Cómo cumplo con mis obligaciones tributarias? 
+
+Obligados a llevar contabilidad: Deben cumplir con lo establecido en el Art. 37 del Reglamento para la Aplicación de la Ley de Régimen Tributario Interno.
+
+Contribuyentes obligados a llevar cuentas de ingresos y egresos: Deben cumplir con lo establecido en el Art. 38 del Reglamento para la Aplicación de la Ley de Régimen Tributario Interno.
+
+La persona natural puede declarar sus impuestos bajo los siguientes regímenes:
+
+- Régimen general: Las personas naturales que realizan alguna actividad económica están obligadas a inscribirse en el RUC, emitir y entregar comprobantes de venta autorizados por el SRI por todas sus transacciones y presentar declaraciones de impuestos de acuerdo a su actividad económica.
+Declarar significa notificar al SRI sus ingresos y egresos y así establecer el impuesto a pagar. Usted puede realizar sus declaraciones a través de la opción Servicios en Línea en la página web del SRI www.sri.gob.ec.
+Este servicio está habilitado las 24 horas durante los 365 del año.
+
+- Régimen Simplificado Para Emprendedores y Negocios Populares – RIMPE:
+RIMPE – Emprendedores	RIMPE - Negocios populares
+Personas naturales y jurídicas con ingresos brutos anuales de hasta USD 300.000 (al 31 de diciembre del año anterior).	Personas naturales con ingresos brutos anuales de hasta USD 20.000 (al 31 de diciembre del año anterior).
+Nota: son ingresos brutos aquellos gravados percibidos por el contribuyente, menos descuentos y devoluciones.
