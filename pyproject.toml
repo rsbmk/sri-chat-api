@@ -1,0 +1,16 @@
+[project]
+name = "sri-chat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115.6",
+    "langchain-community>=0.3.14",
+    "langchain-openai>=0.2.14",
+    "langchain-pinecone>=0.2.2",
+    "langgraph>=0.2.60",
+    "pydantic-settings>=2.7.1",
+    "pypdf>=5.1.0",
+    "python-multipart>=0.0.20",
+]
