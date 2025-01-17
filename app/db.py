@@ -1,9 +1,10 @@
-from pinecone import Pinecone, ServerlessSpec  # type: ignore
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
+from pinecone import Pinecone, ServerlessSpec  # type: ignore
 
-from app.decorators.singleton import singleton
 from app.config import settings
+from app.constants import EMBEDDING_MODEL_NAME, BASE_URL_AZURE, INDEX_VECTOR_STORE
+from app.decorators.singleton import singleton
 
 import time
 
@@ -13,7 +14,7 @@ class Store:
     pinecone: Pinecone
     embeddings: OpenAIEmbeddings
     vector_store: PineconeVectorStore
-    index_name = "langchain-documents-sri-chat"
+    index_name = INDEX_VECTOR_STORE
 
     def __init__(self):
         self.pinecone = Pinecone(api_key=settings.PINECODE_API_KEY)
@@ -32,7 +33,11 @@ class Store:
 
         index = self.pinecone.Index(self.index_name)
 
-        self.embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+        self.embeddings = OpenAIEmbeddings(
+            model=EMBEDDING_MODEL_NAME,
+            base_url=BASE_URL_AZURE,
+            api_key=settings.OPENAI_API_KEY_GH,
+        )
         self.vector_store = PineconeVectorStore(index=index, embedding=self.embeddings)
 
     def get_vector_store(self):
