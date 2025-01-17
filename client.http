@@ -4,9 +4,12 @@
 GET {{BASE_URL}}/chats
 
 ###
-POST {{BASE_URL}}/files/upload
-Content-Type: multipart/form-data; 
+POST {{BASE_URL}}/files/upload?typeFile=text
+
+###
+POST {{BASE_URL}}/chats/input
 
 {
-  "input": "Give me a short plain how i can use decorators"
-} 
+  "input": "puedo tener algun tipo de multa si hago mal mi declaracion de impuesto?",
+  "thread_id": "620de18c-a3b2-4443-9d61-1314cd6da1c9"
+}
