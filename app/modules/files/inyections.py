@@ -1,5 +1,5 @@
-from app.services.files import FilesService, DocumentLoader, StoreEmbedder
-from app.db import Store
+from app.modules.files import FilesService, DocumentLoader, StoreEmbedder
+from app.core.db import Store
 
 store = Store()
 store_embedder = StoreEmbedder(

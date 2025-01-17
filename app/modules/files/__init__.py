@@ -1,7 +1,7 @@
 from fastapi import UploadFile, HTTPException
 
-from app.services.files.embedder_store import StoreEmbedder
-from app.services.files.loader import DocumentLoader
+from app.modules.files.embedder_store import StoreEmbedder
+from app.modules.files.loader import DocumentLoader
 
 import tempfile
 import os

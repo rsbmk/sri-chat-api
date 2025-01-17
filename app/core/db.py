@@ -2,8 +2,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec  # type: ignore
 
-from app.config import settings
-from app.constants import EMBEDDING_MODEL_NAME, BASE_URL_AZURE, INDEX_VECTOR_STORE
+from app.core.config import settings
+from app.core.constants import EMBEDDING_MODEL_NAME, BASE_URL_AZURE, INDEX_VECTOR_STORE
 from app.decorators.singleton import singleton
 
 import time
@@ -22,8 +22,8 @@ class Store:
         if not self.pinecone.has_index(self.index_name):
             index = self.pinecone.create_index(
                 name=self.index_name,
-                # dimension=self.embeddings.embed_query("test").shape[0],
-                dimension=3072,
+                dimension=self.embeddings.embed_query("test").shape[0],
+                # dimension=3072,
                 metric="cosine",
                 spec=ServerlessSpec(cloud="aws", region="us-east-1"),
             )
