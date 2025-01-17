@@ -1,6 +1,6 @@
 from fastapi import APIRouter, File, UploadFile, BackgroundTasks
 
-from app.services.files.inyections import service
+from app.modules.files.inyections import service
 
 router = APIRouter(
     prefix="/files",
