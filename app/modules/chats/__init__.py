@@ -50,7 +50,7 @@ class ChatService:
         return {"messages": response}
 
     async def input(self, data: InputDTO):
-        thread_id = data.thread_id or str(uuid4())
+        thread_id = data.thread_id
 
         response = await self.app.ainvoke(
             {
