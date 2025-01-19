@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Request
 
 from app.decorators.limit import limiter
 from app.modules.chats.dto import InputDTO
@@ -13,6 +13,6 @@ router = APIRouter(
 
 @limiter.limit("5/minute")
 @router.post("/input")
-async def input(body: InputDTO):
+async def input(body: InputDTO, request: Request):
     response = await chatService.input(body)
     return response

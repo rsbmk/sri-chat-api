@@ -1,4 +1,4 @@
-from fastapi import APIRouter, File, UploadFile, BackgroundTasks
+from fastapi import APIRouter, File, UploadFile, BackgroundTasks, Request
 
 from app.decorators.limit import limiter
 from app.modules.files.inyections import service
@@ -14,6 +14,7 @@ router = APIRouter(
 @router.post("/upload")
 async def upload_file(
     background_tasks: BackgroundTasks,
+    request: Request,
     file: UploadFile = File(...),
     type: str | None = None,
 ):
