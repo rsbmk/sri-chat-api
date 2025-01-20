@@ -15,5 +15,9 @@ class ChatModel:
     async def ainvoke(self, prompt):
         return await self.model.ainvoke(prompt)
 
+    async def astream(self, prompt):
+        async for chunk in self.model.astream(prompt):
+            yield chunk
+
     def get_model(self):
         return self.model

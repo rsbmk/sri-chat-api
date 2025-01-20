@@ -6,7 +6,6 @@ from langchain_core.messages import (
 )
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import START, END, StateGraph
-from uuid import uuid4
 
 from app.modules.chats.model import ChatModel
 from app.modules.chats.trimmer import MessageTrimmer
@@ -46,24 +45,18 @@ class ChatService:
             }
         )
 
-        response = await self.model.ainvoke(prompt)
-        return {"messages": response}
+        async for chunk in self.model.astream(prompt):
+            yield {"content": chunk.content}
 
     async def input(self, data: InputDTO):
         thread_id = data.thread_id
 
-        response = await self.app.ainvoke(
+        async for chunk in self.app.astream(
             {
                 "messages": [HumanMessage(content=data.input)],
                 "question": data.input,
             },
             config={"configurable": {"thread_id": thread_id}},
-        )
-
-        lastMessage = response["messages"]
-
-        return {
-            "content": lastMessage.content,
-            "id": lastMessage.id,
-            "thread_id": thread_id,
-        }
+            stream_mode="messages",
+        ):
+            yield chunk[0].content  # type: ignore

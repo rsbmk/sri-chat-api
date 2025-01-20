@@ -1,3 +1,4 @@
+from fastapi.responses import StreamingResponse
 from fastapi import APIRouter, Request
 
 from app.decorators.limit import limiter
@@ -14,5 +15,8 @@ router = APIRouter(
 @limiter.limit("5/minute")
 @router.post("/input")
 async def input(body: InputDTO, request: Request):
-    response = await chatService.input(body)
-    return response
+    async def stream_response():
+        async for chunk in chatService.input(body):
+            yield chunk
+
+    return StreamingResponse(stream_response(), media_type="text/event-stream")
