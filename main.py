@@ -18,6 +18,12 @@ app.add_middleware(
 
 app.add_middleware(SlowAPIMiddleware)
 
+
+@app.get("/status")
+async def status():
+    return {"status": "ok"}
+
+
 api_version_v1 = "v1"
 prefix = f"/api/{api_version_v1}"
 
