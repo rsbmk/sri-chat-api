@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY_GH: SecretStr = SecretStr("openai_api_key_gh")
     OPENAI_API_KEY: str = "openai_api_key"
     PINECODE_API_KEY: str = "pinecode_api_key"
-    ALLOW_ORIGINS: str = "http://127.0.0.1:4321"
+    ALLOW_ORIGINS: str = "http://localhost:4321"
 
     class Config:
         """
